@@ -66,7 +66,7 @@ public class Calculadora {
 		}
 		if (examen < 3) {
 			notaFinal = 0;
-			System.out.println("La nota final es " + notaFinal + " porque tienes un examen por debajo del 3");
+			System.out.println(notaFinal);
 			return false;
 		}
 		return true;
@@ -84,7 +84,7 @@ public class Calculadora {
 		}
 		if (practica < 5) {
 			notaFinal = 0;
-			System.out.println("La nota final es " + notaFinal + " porque tienes una practica por debajo");
+			System.out.println(notaFinal);
 			return false;
 		}
 		return true;
@@ -136,7 +136,7 @@ public class Calculadora {
 
 		if (mediaTotal < 4.0) {
 			notaFinal = mediaTotal;
-			System.out.println("La nota final es " + notaFinal + "porque la nota final esta por debajo del 4");
+			System.out.println(notaFinal);
 		} else {
 			notaFinal = ((mediaTotal * 80) / 100) + notasAsis + notasAct;
 			if (notaFinal == 10)
