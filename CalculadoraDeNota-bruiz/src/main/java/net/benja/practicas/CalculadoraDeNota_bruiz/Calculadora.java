@@ -66,7 +66,7 @@ public class Calculadora {
 		}
 		if (examen < 3) {
 			notaFinal = 0;
-			System.out.println(notaFinal);
+			System.out.printf("%.2f %n", notaFinal);
 			return false;
 		}
 		return true;
@@ -84,7 +84,7 @@ public class Calculadora {
 		}
 		if (practica < 5) {
 			notaFinal = 0;
-			System.out.println(notaFinal);
+			System.out.printf("%.2f %n", notaFinal);
 			return false;
 		}
 		return true;
@@ -136,13 +136,13 @@ public class Calculadora {
 
 		if (mediaTotal < 4.0) {
 			notaFinal = mediaTotal;
-			System.out.println(notaFinal);
+			System.out.printf("%.2f %n", notaFinal);
 		} else {
 			notaFinal = ((mediaTotal * 80) / 100) + notasAsis + notasAct;
 			if (notaFinal == 10)
-				System.out.println("Tienes una MH");
+				System.out.println("MH");
 			else
-				System.out.println("La nota final es " + Math.round(notaFinal * 100) / 100d);
+				System.out.println(Math.round(notaFinal * 100) / 100d);
 		}
 	}
 
