@@ -14,10 +14,13 @@ public class celsius_a_farhenheit {
 		System.out.println("Dime una temperatura en grados celsius (°C)");
 		double grados = teclado.nextFloat();
 		control(grados);
-
+		teclado.close();
 	}
 
-	/**Metodo que controla que el numero se redonde solo a dos decimales y llama al conversor
+	/**
+	 * Metodo que controla que el numero se redonde solo a dos decimales y llama al
+	 * conversor
+	 * 
 	 * @param grados el numero ingresado por la persona
 	 */
 	public static void control(double grados) {
@@ -25,7 +28,9 @@ public class celsius_a_farhenheit {
 		conversion(num);
 	}
 
-	/**Metodo que pasa de grados a farenheit 
+	/**
+	 * Metodo que pasa de grados a farenheit
+	 * 
 	 * @param grados el numero que hay que cambiar
 	 */
 	public static void conversion(double grados) {
