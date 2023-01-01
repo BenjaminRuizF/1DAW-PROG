@@ -31,7 +31,7 @@ public class tiempo_desde_medianoche {
 			}
 		}
 		errores(horas, minutos, segundos);
-
+		teclado.close();
 	}
 
 	/**
