@@ -1,8 +1,11 @@
 package net.benja.practicas.UnJavaALDia_bruiz;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
+/**
+ * @author Benjamin
+ *
+ */
 public class epoch_time_facil {
 
 	public static void main(String[] args) {
@@ -14,6 +17,9 @@ public class epoch_time_facil {
 
 	}
 
+	/**Metodo que guarda cada cifra del array en su variable correspondiente
+	 * @param descompuesto recibe un array con la fecha dividida en año, mes, dia y hora, minuto, segundo
+	 */
 	public static void separar(String[] descompuesto) {
 		String[] horaMinSeg = descompuesto[1].split(":");
 		int hora = 0;
@@ -44,30 +50,63 @@ public class epoch_time_facil {
 		errores(anio, mes, dia, hora, minuto, segundo);
 	}
 
+	/**Metodo que controla los posibles errores
+	 * @param anio la varible que tiene el año indicado
+	 * @param mes la varible que tiene el mes indicado
+	 * @param dia la varible que tiene el dia indicado
+	 * @param hora la varible que tiene la hora indicada
+	 * @param minuto la varible que tiene el minuto indicado
+	 * @param segundo la varible que tiene el segundo indicado
+	 */
 	public static void errores(int anio, int mes, int dia, int hora, int minuto, int segundo) {
+
 		if (anio < 1970) {
 			System.err.println("El anio indicado es erroneo");
 		} else
-			anio += anio * 31535965;
+
 		if (mes < 1 || mes > 12) {
 			System.err.println("El mes indicado es erroneo");
 		} else
-			mes += mes * 2628000;
+
 		if (dia < 1 || dia > 31) {
 			System.err.println("El dia indicado es erroneo");
 		} else
-			dia += dia * 86400;
+
 		if (hora > 23 || hora < 0) {
 			System.err.println("La hora indicada es erronea");
 		} else
-			hora += hora * 3600;
+
 		if (minuto > 60 || minuto < 0) {
 			System.err.println("Los minutos indicados son erroneos");
 		} else
-			minuto += minuto * 60;
+
 		if (segundo > 60 || segundo < 0) {
 			System.err.println("Los segundos indicados son erroneos");
 		}
+		restaFechas(anio, mes, dia, hora, minuto, segundo);
+
+	}
+
+	/**Metodo que resta la fecha con 1970-01-01 y pasa lo restante ha segundos e imprime por pantalla el total
+	 * @param anio la varible que tiene el año indicado ya pasado por el control de errores
+	 * @param mes la varible que tiene el mes indicado ya pasado por el control de errores
+	 * @param dia la varible que tiene el dia indicado ya pasado por el control de errores
+	 * @param hora la varible que tiene la hora indicada ya pasado por el control de errores
+	 * @param minuto la varible que tiene el minuto indicado ya pasado por el control de errores
+	 * @param segundo la varible que tiene el segundo indicado ya pasado por el control de errores
+	 */
+	public static void restaFechas(int anio, int mes, int dia, int hora, int minuto, int segundo) {
+		int segTotal = 0;
+		int anioFinal = anio - 1970;
+		int mesFinal = mes - 01;
+		int diaFinal = dia - 01;
+		segTotal += anioFinal * 31535965;
+		segTotal += mesFinal * 2628000;
+		segTotal += diaFinal * 86400;
+		segTotal += hora * 3600;
+		segTotal += minuto * 60;
+		segTotal += segTotal + segundo;
+		System.out.println("Los segundos pasados desde el 1970-01-01_00:00:00 son " + segTotal);
 	}
 
 }
