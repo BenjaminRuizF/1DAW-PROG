@@ -17,8 +17,11 @@ public class epoch_time_facil {
 
 	}
 
-	/**Metodo que guarda cada cifra del array en su variable correspondiente
-	 * @param descompuesto recibe un array con la fecha dividida en año, mes, dia y hora, minuto, segundo
+	/**
+	 * Metodo que guarda cada cifra del array en su variable correspondiente
+	 * 
+	 * @param descompuesto recibe un array con la fecha dividida en año, mes, dia y
+	 *                     hora, minuto, segundo
 	 */
 	public static void separar(String[] descompuesto) {
 		String[] horaMinSeg = descompuesto[1].split(":");
@@ -50,12 +53,14 @@ public class epoch_time_facil {
 		errores(anio, mes, dia, hora, minuto, segundo);
 	}
 
-	/**Metodo que controla los posibles errores
-	 * @param anio la varible que tiene el año indicado
-	 * @param mes la varible que tiene el mes indicado
-	 * @param dia la varible que tiene el dia indicado
-	 * @param hora la varible que tiene la hora indicada
-	 * @param minuto la varible que tiene el minuto indicado
+	/**
+	 * Metodo que controla los posibles errores
+	 * 
+	 * @param anio    la varible que tiene el año indicado
+	 * @param mes     la varible que tiene el mes indicado
+	 * @param dia     la varible que tiene el dia indicado
+	 * @param hora    la varible que tiene la hora indicada
+	 * @param minuto  la varible que tiene el minuto indicado
 	 * @param segundo la varible que tiene el segundo indicado
 	 */
 	public static void errores(int anio, int mes, int dia, int hora, int minuto, int segundo) {
@@ -66,12 +71,16 @@ public class epoch_time_facil {
 
 		if (mes < 1 || mes > 12) {
 			System.err.println("El mes indicado es erroneo");
-		} else
-
-		if (dia < 1 || dia > 31) {
-			System.err.println("El dia indicado es erroneo");
-		} else
-
+		}
+		if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12) {
+			if (dia < 1 || dia > 31) {
+				System.err.println("El dia indicado es erroneo");
+			} else if (mes == 2 || mes == 4 || mes == 6 || mes == 9 || mes == 11) {
+				if (dia < 1 || dia > 30) {
+					System.err.println("El dia indicado es erroneo");
+				}
+			}
+		}
 		if (hora > 23 || hora < 0) {
 			System.err.println("La hora indicada es erronea");
 		} else
@@ -82,18 +91,27 @@ public class epoch_time_facil {
 
 		if (segundo > 60 || segundo < 0) {
 			System.err.println("Los segundos indicados son erroneos");
-		}
-		restaFechas(anio, mes, dia, hora, minuto, segundo);
+		} else
+			restaFechas(anio, mes, dia, hora, minuto, segundo);
 
 	}
 
-	/**Metodo que resta la fecha con 1970-01-01 y pasa lo restante ha segundos e imprime por pantalla el total
-	 * @param anio la varible que tiene el año indicado ya pasado por el control de errores
-	 * @param mes la varible que tiene el mes indicado ya pasado por el control de errores
-	 * @param dia la varible que tiene el dia indicado ya pasado por el control de errores
-	 * @param hora la varible que tiene la hora indicada ya pasado por el control de errores
-	 * @param minuto la varible que tiene el minuto indicado ya pasado por el control de errores
-	 * @param segundo la varible que tiene el segundo indicado ya pasado por el control de errores
+	/**
+	 * Metodo que resta la fecha con 1970-01-01 y pasa lo restante ha segundos e
+	 * imprime por pantalla el total
+	 * 
+	 * @param anio    la varible que tiene el año indicado ya pasado por el control
+	 *                de errores
+	 * @param mes     la varible que tiene el mes indicado ya pasado por el control
+	 *                de errores
+	 * @param dia     la varible que tiene el dia indicado ya pasado por el control
+	 *                de errores
+	 * @param hora    la varible que tiene la hora indicada ya pasado por el control
+	 *                de errores
+	 * @param minuto  la varible que tiene el minuto indicado ya pasado por el
+	 *                control de errores
+	 * @param segundo la varible que tiene el segundo indicado ya pasado por el
+	 *                control de errores
 	 */
 	public static void restaFechas(int anio, int mes, int dia, int hora, int minuto, int segundo) {
 		int segTotal = 0;
