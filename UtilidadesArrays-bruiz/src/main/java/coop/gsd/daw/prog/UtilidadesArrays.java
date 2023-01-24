@@ -70,7 +70,7 @@ public class UtilidadesArrays {
 	 * @return el valor del mayor entero del array
 	 */
 	public static int maximo(int[] array) {
-		int numero = 0;
+		int numero = Integer.MIN_VALUE;
 		for (int i = 0; i < array.length; i++) {
 			if (array[i] > numero) {
 				numero = array[i];
