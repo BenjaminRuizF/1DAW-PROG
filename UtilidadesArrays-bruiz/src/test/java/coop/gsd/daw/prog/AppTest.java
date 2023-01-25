@@ -21,6 +21,10 @@ public class AppTest
         assertTrue( true );
     }
     @Test
+    public void testCreacionObj() {
+    	UtilidadesArrays U1 = new UtilidadesArrays();
+    }
+    @Test
     public void testIncrementar(){
     	int[] esperado = {2,3,4,5};
     	assertArrayEquals(esperado, UtilidadesArrays.incrementar(positivo, 1));
@@ -119,6 +123,7 @@ public class AppTest
     	int posicion = UtilidadesArrays.minimoIndice(positivo);
     	assertEquals(0, posicion);
     }
+    @Test
     public void testMinimoIndiceNegativo(){
     	int posicion = UtilidadesArrays.minimoIndice(negativo);
     	assertEquals(3, posicion);
@@ -134,6 +139,7 @@ public class AppTest
     	double media = UtilidadesArrays.media(positivo);
     	assertEquals(2.5, media);
     }
+    @Test
     public void testMediaNegativo() {
     	double media = UtilidadesArrays.media(negativo);
     	assertEquals(-2.5, media);
