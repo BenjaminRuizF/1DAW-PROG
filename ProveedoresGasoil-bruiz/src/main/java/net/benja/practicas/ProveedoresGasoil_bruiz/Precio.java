@@ -1,8 +1,20 @@
 package net.benja.practicas.ProveedoresGasoil_bruiz;
 
-public class Precio {
+import java.sql.Date;
 
-	public Precio(Date d, double importe) {
+public class Precio {
+	private Date fecha;
+	private double importe;
+	public Precio(Date fecha, double importe) {
+		this.fecha = fecha;
+		this.importe = importe;
 		
 	}
+	public Date getFecha() {
+		return fecha;
+	}
+	public double getImporte() {
+		return importe;
+	}
+	
 }
