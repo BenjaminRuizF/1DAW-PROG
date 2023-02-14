@@ -2,11 +2,23 @@ package net.benja.practicas.ProveedoresGasoil_bruiz;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.sql.Date;
 import java.util.Scanner;
 
 public class Proveedor {
 	private String nombreProveedor;
+	private String line;
+	private int contador;
+	private double importe;
+	private int anio;
+	private int mes;
+	private int dia;
+	private Date fecha;
 	private Precio[] precios;
+
+	public Proveedor(String nombreDeFichero) {
+		this.nombreProveedor = nombreDeFichero;
+	}
 
 	public void leerFichero(String args) {
 		try {
@@ -14,44 +26,46 @@ public class Proveedor {
 			Scanner inputFile = new Scanner(f);
 
 			while (inputFile.hasNext()) {
-				String line = inputFile.nextLine();
-				System.out.println(line);
-				String[] array;
-				
- 				for (int i = 0; i < ; i++) {
-					array[i] = line.split(" ");
- 				}
- 				for (int i = 0; i < array.length; i++) {
-					
+				line = inputFile.nextLine();
+				contador++;
+				if (contador < 1) {
+					System.err.println("Necesitas minimo una linea");
+					return;
 				}
-					/*for (int j = 0; j < 10; j++) {
-
-						precio2[j] = precio[1];
-					}
-				}*/
-
+				if (contador > 1000) {
+					System.err.println("No puedes tener mas de 1000 lineas");
+					return;
+				}
 			}
-
+			separarLineas(line);
+			if (precios == null) {
+				precios = new Precio[contador];
+			}
+			for (int i = 0; i < contador; i++) {
+				Precio P = new Precio(fecha, importe);
+				precios[i] = P;
+				System.out.println(precios[i]);
+			}
+			System.out.println(fecha);
+			System.out.println(anio + "_" + mes + "_" + dia + " " + importe);
+			System.out.println(precios);
 			inputFile.close();
 		} catch (FileNotFoundException e) {
 			System.err.println("ERROR: no se puede abrir el fichero");
 
 		}
-		/*if (precios == null) {
-			precios = new Precio[1];
-			precios[0] = line;
-			return;
-		} else {
-			Precio[] aux = new Precio[precios.length + 1];
-			System.arraycopy(precios, 0, aux, 0, precios.length);
-			aux[precios.length] = line;
-			precios = aux;
-		}*/
 
 	}
 
-	public Proveedor(String nombreDeFichero) {
-		this.nombreProveedor = nombreDeFichero;
+	public void separarLineas(String linea) {
+		int espacio = linea.lastIndexOf(" ");
+		int ultimoGuion = linea.lastIndexOf("-");
+		int primerGuion = linea.indexOf("-");
+		anio = Integer.parseInt(linea.substring(0, primerGuion));
+		mes = Integer.parseInt(linea.substring(primerGuion + 1, ultimoGuion));
+		dia = Integer.parseInt(linea.substring(ultimoGuion + 1, espacio));
+		importe = Double.parseDouble(linea.substring(espacio, linea.length()));
+		fecha = new Date(anio - 1900, mes, dia);
 	}
 
 	public double getImporte(int dia, int mes, int anio) {
