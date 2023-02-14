@@ -1,4 +1,4 @@
-package net.benja.practicas.ProveedoresGasoil_bruiz;
+	package net.benja.practicas.ProveedoresGasoil_bruiz;
 
 public class Proveedor {
 
