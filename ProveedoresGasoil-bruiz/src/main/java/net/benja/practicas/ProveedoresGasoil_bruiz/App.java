@@ -18,5 +18,7 @@ public class App {
 		Proveedor P1 = new Proveedor(nombreProveedor);
 		System.out.println(nombreProveedor);
 		P1.leerFichero(args[0]);
+		
+		System.out.println(P1.getImporte(01, 01, 2023));
 	}
 }
