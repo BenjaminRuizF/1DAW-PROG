@@ -16,9 +16,12 @@ public class App {
 		nombreProveedor = args[0].substring(primerSeparador + 1, segundoSeparador);
 
 		Proveedor P1 = new Proveedor(nombreProveedor);
+		Proveedor P2 = new Proveedor(nombreProveedor);
 		System.out.println(nombreProveedor);
 		P1.leerFichero(args[0]);
-		
-		System.out.println(P1.getImporte(01, 01, 2023));
+		//P2.leerFichero(args[1]);
+		System.out.println(P1.getImporte(8, 01, 2023));
+		System.out.println(P1.toString());
+		System.out.println(P1.getMediaMensual(01, 2023));
 	}
 }
