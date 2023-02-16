@@ -2,12 +2,14 @@ package net.benja.practicas.ProveedoresGasoil_bruiz;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class Proveedor {
-	private String nombreProveedor;
+	public String nombreProveedor;
+	public String fechaPorPantalla;
 	private String line;
 	private int contador;
 	private double importe;
@@ -18,18 +20,22 @@ public class Proveedor {
 	private Precio[] precios;
 
 	public Proveedor(String nombreDeFichero) {
-		this.nombreProveedor = nombreDeFichero;
+		int primerSeparador = nombreDeFichero.lastIndexOf("\\");
+		int segundoSeparador = nombreDeFichero.lastIndexOf(".");
+		this.nombreProveedor = nombreDeFichero.substring(primerSeparador + 1, segundoSeparador);
+		leerFichero(nombreDeFichero);
 	}
 
-	public void leerFichero(String args) {
+	public void leerFichero(String fichero) {
 		try {
-			File f = new File(args);
+			File f = new File(fichero);
 			Scanner inputFile = new Scanner(f);
-
-			while (inputFile.hasNext()) {
-				line = inputFile.nextLine();
+			Scanner fileScanner = new Scanner(f);
+			while (inputFile.hasNextLine()) {
+				inputFile.nextLine();
 				contador++;
 			}
+			inputFile.close();
 			if (contador < 1) {
 				System.err.println("Necesitas minimo una linea");
 				return;
@@ -37,19 +43,17 @@ public class Proveedor {
 			if (contador > 1000) {
 				System.err.println("No puedes tener mas de 1000 lineas");
 				return;
-			} 
-			
+			}
 			if (precios == null) {
 				precios = new Precio[contador];
 			}
 			for (int i = 0; i < contador; i++) {
+				line = fileScanner.nextLine();
 				separarLineas(line);
 				Precio P = new Precio(fecha, importe);
 				precios[i] = P;
-				System.out.println(precios[i].getFecha());
-				// System.out.println(precios[i].getImporte());
 			}
-			inputFile.close();
+			fileScanner.close();
 
 		} catch (FileNotFoundException e) {
 			System.err.println("ERROR: no se puede abrir el fichero");
@@ -68,10 +72,11 @@ public class Proveedor {
 		importe = Double.parseDouble(linea.substring(espacio, linea.length()));
 		fecha = new Date(anio - 1900, mes - 1, dia);
 	}
+	
 
 	public double getImporte(int dia, int mes, int anio) {
 		Date fechaImporte;
-		if (anio < 1) {
+		if (anio < 1000) {
 			return 0;
 		}
 		if (mes < 1 || mes > 12) {
@@ -92,37 +97,47 @@ public class Proveedor {
 
 	public double getMediaMensual(int mes, int anio) {
 		Date mesMedia;
-		int contador = 0;
-		double suma =0;
-		if (anio < 1) {
+		int contadorMedia = 1;
+		double suma = 0;
+		if (anio < 1000) {
 			return 0;
 		}
 		if (mes < 1 || mes > 12) {
 			return 0;
 		}
-		mesMedia= new Date(anio-1900, mes-1, 1);
+		
 		for (int i = 0; i < precios.length; i++) {
+			mesMedia = new Date(anio - 1900, mes - 1, contadorMedia);
 			if (mesMedia.compareTo(precios[i].getFecha()) == 0) {
 				suma += precios[i].getImporte();
-				contador++;
+				contadorMedia++;
 			}
 		}
-		
-		return suma/contador;
+		if (contador<2) {
+			return 0;
+		}else return suma / (contadorMedia-1);
 	}
-
+	public Precio getPrecioMinimo() {
+		double numeroMinimo = Double.MAX_VALUE;
+		int posicion = 0;
+		for (int i = 0; i < precios.length; i++) {
+			if(precios[i].getImporte()<numeroMinimo) {
+				numeroMinimo = precios[i].getImporte();
+				posicion = i;
+			}
+		}
+		return precios[posicion];
+		
+		}
 	@Override
 	public String toString() {
-		String cadena ="";
+		String cadena = "";
 		for (int i = 0; i < precios.length; i++) {
-			cadena += precios[i].getFecha().toString()+" => "+ precios[i].getImporte()+"\n";
+			cadena += precios[i].getFecha().toString() + " => " + precios[i].getImporte() + "\n";
 		}
-		return nombreProveedor+"\n"+cadena;
+		return nombreProveedor + "\n" + cadena;
 	}
 
-	// public Precio getPrecioMinimo() {
-
-	// }
 	
 
 }
