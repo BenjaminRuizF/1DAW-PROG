@@ -2,6 +2,10 @@ package net.benja.practicas.ProveedoresGasoil_bruiz;
 
 import java.util.Date;
 
+/**
+ * @author Benjamin
+ *
+ */
 public class Precio {
 	private Date fecha;
 	private double importe;
