@@ -15,9 +15,9 @@ public class AppTest {
 
 	Date fecha = new Date(2023, 2, 1);
 	double importe = 2.5;
-	String nombreFichero = "C:\\Users\\Benjamin\\OneDrive\\Escritorio\\supergasoil.txt";
-	String ficheroVacio = "C:\\Users\\Benjamin\\OneDrive\\Escritorio\\vacio.txt";
-	String fichero1000 = "C:\\Users\\Benjamin\\OneDrive\\Escritorio\\1000-lineas.txt";
+	String nombreFichero = "supergasoil.txt";
+	String ficheroVacio = "vacio.txt";
+	String fichero1000 = "1000-lineas.txt";
 
 	@Test
 	public void shouldAnswerWithTrue() {
@@ -51,7 +51,13 @@ public class AppTest {
 	public void creacionDeObjetoProveedor() {
 		Proveedor P = new Proveedor(nombreFichero);
 	}
-
+	@Test
+	@DisplayName("Comprobando que .getFecha devuelve lo que tiene que devolver")
+	public void probandoGeterNombre() {
+		Proveedor P = new Proveedor(nombreFichero);
+		String nombreEsperado = "supergasoil" ;
+		assertEquals(nombreEsperado, P.getNombreProveedor());
+	}
 	@Test
 	@DisplayName("Creacion de un objeto proveedor con un fichero vacio")
 	public void creacionDeObjetoProveedorVacio() {

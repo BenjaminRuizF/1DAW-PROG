@@ -42,7 +42,7 @@ public class Proveedor {
 	 * @param fichero recibe un fichero
 	 * @throws IllegalArgumentException
 	 */
-	public void leerFichero(String fichero) throws IllegalArgumentException {
+	public void leerFichero(String fichero){
 		try {
 			File f = new File(fichero);
 			Scanner inputFile = new Scanner(f);
@@ -70,7 +70,7 @@ public class Proveedor {
 			fileScanner.close();
 
 		} catch (FileNotFoundException e) {
-			System.err.println("ERROR: no se puede abrir el fichero");
+			throw new IllegalArgumentException("Fichero invalido");
 
 		}
 
