@@ -60,7 +60,7 @@ public class AppTest {
 		assertEquals(nombreEsperado, P.getNombreProveedor());
 	}
 	@Test
-	@Disabled("Da fallo")
+	@Disabled("Da fallo ")
 	@DisplayName("Creacion de un objeto proveedor con un fichero vacio")
 	public void creacionDeObjetoProveedorVacio() {
 		Proveedor P = new Proveedor(ficheroVacio);
