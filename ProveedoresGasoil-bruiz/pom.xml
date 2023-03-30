@@ -55,7 +55,7 @@
 						<archive>
 							<manifest>
 								<addClasspath>true</addClasspath>
-								<mainClass>net.benja.practicas.ProveedoresGasoil-bruiz.App</mainClass>
+								<mainClass>net.benja.practicas.ProveedoresGasoil_bruiz.App</mainClass>
 							</manifest>
 						</archive>
 					</configuration>
