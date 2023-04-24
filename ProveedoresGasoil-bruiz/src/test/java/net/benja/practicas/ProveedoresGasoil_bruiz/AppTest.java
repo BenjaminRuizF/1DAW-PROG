@@ -60,14 +60,22 @@ public class AppTest {
 		assertEquals(nombreEsperado, P.getNombreProveedor());
 	}
 	@Test
+<<<<<<< HEAD
 	@Disabled("Da error")
+=======
+	@Disabled("Da fallo ")
+>>>>>>> branch 'master' of git@github.com:BenjaminRuizF/1DAW-PROG.git
 	@DisplayName("Creacion de un objeto proveedor con un fichero vacio")
 	public void creacionDeObjetoProveedorVacio() {
 		Proveedor P = new Proveedor(ficheroVacio);
 	}
 
 	@Test
+<<<<<<< HEAD
 	@Disabled("Da error")
+=======
+	@Disabled("Da fallo")
+>>>>>>> branch 'master' of git@github.com:BenjaminRuizF/1DAW-PROG.git
 	@DisplayName("Creacion de un objeto proveedor con un fichero de 1000 lineas")
 	public void creacionDeObjetoProveedor1000() {
 		Proveedor P = new Proveedor(fichero1000);

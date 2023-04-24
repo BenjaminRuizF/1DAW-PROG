@@ -4,10 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>net.benja.practicas</groupId>
-	<artifactId>ProveedoresGasoil-bruiz</artifactId>
+	<artifactId>CsvToDb-bruiz</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<name>ProveedoresGasoil-bruiz</name>
+	<name>CsvToDb-bruiz</name>
 	<!-- FIXME change it to the project's website -->
 	<url>http://www.example.com</url>
 
@@ -19,10 +19,15 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-engine</artifactId>
-			<version>5.9.1</version>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.oracle.database.jdbc</groupId>
+			<artifactId>ojdbc8</artifactId>
+			<version>21.1.0.0</version>
 		</dependency>
 	</dependencies>
 
@@ -55,10 +60,22 @@
 						<archive>
 							<manifest>
 								<addClasspath>true</addClasspath>
-								<mainClass>net.benja.practicas.ProveedoresGasoil_bruiz.App</mainClass>
+								<mainClass>net.benja.practicas.CsvToDb-bruiz.App</mainClass>
 							</manifest>
 						</archive>
 					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>exec-maven-plugin</artifactId>
+					<version>1.4.0</version>
+					<configuration>
+						<mainClass>net.benja.practicas.CsvToDb-bruiz.App</mainClass>
+					</configuration>
+				</plugin>
+				<plugin>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>3.0.2</version>
 				</plugin>
 				<plugin>
 					<artifactId>maven-install-plugin</artifactId>
