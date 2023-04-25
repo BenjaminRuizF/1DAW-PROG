@@ -22,9 +22,6 @@ public class App {
 			System.out.println(P[i].toString());
 			System.out.println("El precio mas bajo del proveedor: " + P[i].getNombreProveedor() + " sucedio el "
 					+ P[i].getPrecioMinimo().getFecha() + " y fue de: " + P[i].getPrecioMinimo().getImporte());
-
-			System.out.println("El precio mas bajo del proveedor: " + P[i].getNombreProveedor() + " sucedio el "
-					+ P[i].getPrecioMinimo().getFecha() + " y fue de: " + P[i].getPrecioMinimo().getImporte());
 			System.out.println("El importe del dia 3-ene-2023 del proveedor: " + P[i].getNombreProveedor()
 					+ " fue de : " + P[i].getImporte(3, 1, 2023));
 			System.out.println("La media mensual para ene-2023 del proveedor: " + P[i].getNombreProveedor() + " fue de "
