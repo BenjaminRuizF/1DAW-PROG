@@ -6,6 +6,7 @@ public class App {
 	 * @throws ClassNotFoundException
 	 */
 	public static void main(String[] args) {
+		Proveedor[] P = new Proveedor[args.length];
 		if (args.length < 1) {
 			System.err.println("Necesitas minimo un proveedor");
 			return;
@@ -14,18 +15,25 @@ public class App {
 			System.err.println("No puedes tener mas de 10 proveedores");
 			return;
 		}
-		Proveedor P1 = new Proveedor(args[0]);
-		Proveedor P2 = new Proveedor(args[1]);
-		System.out.println(P1.toString());
-		System.out.println(P2.toString());
-		System.out.println("El precio mas bajo del proveedor: " + P1.getNombreProveedor()+ " sucedio el "
-				+ P1.getPrecioMinimo().getFecha() + " y fue de: " + P1.getPrecioMinimo().getImporte());
-		System.out.println("El precio mas bajo del proveedor: " + P2.getNombreProveedor() + " sucedio el "
-				+ P2.getPrecioMinimo().getFecha() + " y fue de: " + P2.getPrecioMinimo().getImporte());
-		System.out.println("El importe del dia 3-ene-2023 del proveedor: " + P1.getNombreProveedor() + " fue de : "
-				+ P1.getImporte(3, 1, 2023));
-		System.out.println("La media mensual para ene-2023 del proveedor: " + P2.getNombreProveedor() + " fue de "
-				+ P2.getMediaMensual(1, 2023));
+		for (int i = 0; i < args.length; i++) {
+			P[i] = new Proveedor(args[i]);
+		}
+		for (int i = 0; i < args.length; i++) {
+			System.out.println(P[i].toString());
+		}
+
+		System.out.println("El precio mas bajo del proveedor: " + P[0].getNombreProveedor() + " sucedio el "
+				+ P[0].getPrecioMinimo().getFecha() + " y fue de: " + P[0].getPrecioMinimo().getImporte());
+		if (args.length > 1) {
+			System.out.println("El precio mas bajo del proveedor: " + P[1].getNombreProveedor() + " sucedio el "
+					+ P[1].getPrecioMinimo().getFecha() + " y fue de: " + P[1].getPrecioMinimo().getImporte());
+		}
+		System.out.println("El importe del dia 3-ene-2023 del proveedor: " + P[0].getNombreProveedor() + " fue de : "
+				+ P[0].getImporte(3, 1, 2023));
+		if (args.length > 1) {
+			System.out.println("La media mensual para ene-2023 del proveedor: " + P[1].getNombreProveedor() + " fue de "
+					+ P[1].getMediaMensual(1, 2023));
+		}
 
 	}
 }
