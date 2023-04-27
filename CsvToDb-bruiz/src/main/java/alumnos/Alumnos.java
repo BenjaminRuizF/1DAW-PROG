@@ -20,7 +20,7 @@ public class Alumnos {
 	private void jdbcDemo(Connection conn) throws SQLException {
 		Statement stmt = conn.createStatement();
 		stmt.executeUpdate(
-				"INSERT INTO ... (curso,numClase,id1) VALUES ('" + curso + "'," + numClase + ",'" + id1 + "')");
+				"INSERT INTO estudiantes_tbl (curso,numClase,id1) VALUES ('" + curso + "'," + numClase + ",'" + id1 + "')");
 		stmt.close();
 		conn.close();
 	}

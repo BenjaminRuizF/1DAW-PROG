@@ -54,23 +54,11 @@
 					<version>2.22.1</version>
 				</plugin>
 				<plugin>
-					<artifactId>maven-jar-plugin</artifactId>
-					<version>3.0.2</version>
-					<configuration>
-						<archive>
-							<manifest>
-								<addClasspath>true</addClasspath>
-								<mainClass>net.benja.practicas.CsvToDb-bruiz.App</mainClass>
-							</manifest>
-						</archive>
-					</configuration>
-				</plugin>
-				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>exec-maven-plugin</artifactId>
 					<version>1.4.0</version>
 					<configuration>
-						<mainClass>net.benja.practicas.CsvToDb-bruiz.App</mainClass>
+						<mainClass>net.benja.practicas.CsvToDb_bruiz.App</mainClass>
 					</configuration>
 				</plugin>
 				<plugin>
