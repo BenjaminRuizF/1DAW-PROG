@@ -12,8 +12,11 @@ import alumnos.Alumnos;
  *
  */
 public class App {
+	private final static int MAXARGS = 5;
 	public static void main(String[] args) {
-		
+		if (args.length != MAXARGS) {
+			return;
+		}
 		String ip = args[0];
 		String nombreBD = args[1];
 		String user = args[2];
@@ -26,7 +29,6 @@ public class App {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 
 	}
 }

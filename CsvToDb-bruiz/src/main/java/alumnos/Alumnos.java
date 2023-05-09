@@ -25,4 +25,17 @@ public class Alumnos {
 		conn.close();
 	}
 
+	public String getCurso() {
+		return curso;
+	}
+
+	public int getNumClase() {
+		return numClase;
+	}
+
+	public String getId1() {
+		return id1;
+	}
+	
+
 }
