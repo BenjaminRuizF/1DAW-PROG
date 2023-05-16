@@ -14,12 +14,11 @@ public class Lectura {
 	private String id1;
 	private int contador;
 
-	public Lectura(String fichero) {
+	public Lectura() {
 		args = new Alumnos[115];
-		leerFichero(fichero);
 	}
 
-	public void leerFichero(String fich) {
+	public Alumnos[] leerFichero(String fich) {
 		try {
 			File f = new File(fich);
 			Scanner inputFile = new Scanner(f);
@@ -38,8 +37,10 @@ public class Lectura {
 			}
 
 			inputFile.close();
+			return args;
 		} catch (FileNotFoundException e) {
 			System.err.println("ERROR: no se puede abrir el fichero");
+			return args;
 		}
 	}
 

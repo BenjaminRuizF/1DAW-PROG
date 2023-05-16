@@ -22,13 +22,9 @@ public class App {
 		String user = args[2];
 		String passwd = args[3];
 		String fichero = args[4];
-		Lectura lectura = new Lectura(fichero);
-		try {
-			Connection conn1 = DriverManager.getConnection("jdbc:oracle:thin:@//" + ip + "/" + nombreBD, user, passwd);
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		Alumnos bd = new Alumnos(ip, nombreBD, user, passwd, fichero);
+		bd.conectarBd(ip, nombreBD, user, passwd);
+		
 
 	}
 }
