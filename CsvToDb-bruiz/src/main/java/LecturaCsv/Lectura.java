@@ -8,6 +8,7 @@ import alumnos.Alumnos;
 
 public class Lectura {
 	private Alumnos[] args;
+	private Alumnos[] argsnull;
 	private String fichero;
 	private String curso;
 	private int numClase;
@@ -40,7 +41,7 @@ public class Lectura {
 			return args;
 		} catch (FileNotFoundException e) {
 			System.err.println("ERROR: no se puede abrir el fichero");
-			return args;
+			return argsnull;
 		}
 	}
 

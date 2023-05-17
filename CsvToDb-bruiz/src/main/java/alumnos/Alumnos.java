@@ -12,10 +12,6 @@ public class Alumnos {
 	private String curso;
 	private int numClase;
 	private String id1;
-	private String ip;
-	private String nombreBD;
-	private String user;
-	private String passwd;
 	private String fichero;
 
 	public Alumnos(String curso, int numClase, String id1) {
@@ -23,20 +19,16 @@ public class Alumnos {
 		this.numClase = numClase;
 		this.id1 = id1;
 	}
-	
-	public Alumnos( String ip, String nombreBD, String user, String passwd, String fichero) {
-		this.ip = ip;
-		this.nombreBD = nombreBD;
-		this.user = user;
-		this.passwd = passwd;
+
+	public Alumnos(String fichero) {
 		this.fichero = fichero;
 	}
 
 	public void conectarBd(String ip, String nombreBD, String user, String passwd) {
 		try {
 			Connection conn1 = DriverManager.getConnection("jdbc:oracle:thin:@//" + ip + "/" + nombreBD, user, passwd);
-			
 			jdbcDemo(conn1, fichero);
+
 		} catch (SQLException e) {
 			System.err.println("Las BBDD no son lo tuyo: " + e.getMessage());
 		}
@@ -44,19 +36,20 @@ public class Alumnos {
 
 	private static void jdbcDemo(Connection conn, String fichero) throws SQLException {
 		Statement stmt = conn.createStatement();
-		ResultSet resultSet = stmt.executeQuery( "SELECT * FROM Estudiantes_tbl" );
 		Alumnos[] alumnos;
 		Lectura lectura = new Lectura();
 		alumnos = lectura.leerFichero(fichero);
+		if(alumnos[0]==null) {
+			return;
+		}
 		for (int i = 0; i < alumnos.length; i++) {
 			String curso = alumnos[i].getCurso();
 			int numClase = alumnos[i].getNumClase();
 			String id1 = alumnos[i].getId1();
-			stmt.executeUpdate("INSERT INTO estudiantes_tbl(NUM_LISTA,MODULO,ID1) VALUES (" + numClase + ",'" + curso + "','" + id1 + "');");
+			stmt.executeQuery("INSERT INTO estudiantes_tbl(NUM_LISTA,MODULO,ID1) VALUES (" + numClase + ",'" + curso+ "','" + id1 + "')");
+
 		}
-		 
-		
-		
+
 		stmt.close();
 		conn.close();
 	}
@@ -72,6 +65,5 @@ public class Alumnos {
 	public String getId1() {
 		return id1;
 	}
-	
 
 }
