@@ -2,6 +2,6 @@ Manifest-Version: 1.0
 Built-By: b.ruiz
 Build-Jdk: 17.0.3
 Class-Path: ojdbc8-21.1.0.0.jar
-Main-Class: coop.gsd.daw.prog.ProveedoresGasoil_ajimenez.App
+Main-Class: net.benja.practicas.CsvToDb_bruiz.App
 Created-By: Maven Integration for Eclipse
 

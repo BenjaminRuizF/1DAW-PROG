@@ -69,7 +69,7 @@
 						<archive>
 							<manifest>
 								<addClasspath>true</addClasspath>
-								<mainClass>coop.gsd.daw.prog.ProveedoresGasoil_ajimenez.App</mainClass>
+								<mainClass>net.benja.practicas.CsvToDb_bruiz.App</mainClass>
 							</manifest>
 						</archive>
 					</configuration>
