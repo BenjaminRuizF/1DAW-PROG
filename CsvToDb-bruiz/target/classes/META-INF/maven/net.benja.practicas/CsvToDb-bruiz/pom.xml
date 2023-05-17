@@ -59,6 +59,7 @@
 					<version>1.4.0</version>
 					<configuration>
 						<mainClass>net.benja.practicas.CsvToDb_bruiz.App</mainClass>
+						<cleanupDaemonThreads>false</cleanupDaemonThreads>
 					</configuration>
 				</plugin>
 				<plugin>

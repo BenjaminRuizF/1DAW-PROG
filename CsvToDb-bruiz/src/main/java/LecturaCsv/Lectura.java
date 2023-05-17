@@ -16,7 +16,7 @@ public class Lectura {
 	private int contador;
 
 	public Lectura() {
-		args = new Alumnos[115];
+		args = new Alumnos[1000];
 	}
 
 	public Alumnos[] leerFichero(String fich) {

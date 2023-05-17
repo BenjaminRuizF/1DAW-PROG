@@ -27,6 +27,7 @@ public class Alumnos {
 	public void conectarBd(String ip, String nombreBD, String user, String passwd) {
 		try {
 			Connection conn1 = DriverManager.getConnection("jdbc:oracle:thin:@//" + ip + "/" + nombreBD, user, passwd);
+			System.out.println("Conectado a la base de datos");
 			jdbcDemo(conn1, fichero);
 
 		} catch (SQLException e) {
@@ -42,14 +43,17 @@ public class Alumnos {
 		if(alumnos[0]==null) {
 			return;
 		}
+		
 		for (int i = 0; i < alumnos.length; i++) {
+			if(alumnos[i]==null) {
+				continue;
+			}
 			String curso = alumnos[i].getCurso();
 			int numClase = alumnos[i].getNumClase();
 			String id1 = alumnos[i].getId1();
 			stmt.executeQuery("INSERT INTO estudiantes_tbl(NUM_LISTA,MODULO,ID1) VALUES (" + numClase + ",'" + curso+ "','" + id1 + "')");
-
 		}
-
+		System.out.println("Alumnos insertados");
 		stmt.close();
 		conn.close();
 	}
