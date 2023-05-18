@@ -4,10 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>net.benja.practicas</groupId>
-	<artifactId>CsvToDb-bruiz</artifactId>
+	<artifactId>CsvToDb-bruiz1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<name>CsvToDb-bruiz</name>
+	<name>CsvToDb-bruiz1</name>
 	<!-- FIXME change it to the project's website -->
 	<url>http://www.example.com</url>
 
