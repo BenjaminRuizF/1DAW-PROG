@@ -2,6 +2,10 @@ package net.benja.practicas.CsvToDb_bruiz;
 
 import alumnos.Alumnos;
 
+/**
+ * Hello world!
+ *
+ */
 public class App {
 	private final static int MAXARGS = 5;
 

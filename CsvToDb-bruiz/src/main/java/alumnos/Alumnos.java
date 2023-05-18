@@ -2,11 +2,12 @@ package alumnos;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import LecturaCsv.Lectura;
+import lecturaCsv.Lectura;
+
+
 
 public class Alumnos {
 	private String curso;
@@ -69,5 +70,4 @@ public class Alumnos {
 	public String getId1() {
 		return id1;
 	}
-
 }
