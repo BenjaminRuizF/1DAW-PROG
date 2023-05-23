@@ -67,7 +67,7 @@ public class App {
 		}
 
 		if (args.length != MAXARGS) {
-			LOGGER.log(Level.SEVERE, "Numero de argumentos invalidos \"{0}\" ", args);
+			LOGGER.log(Level.SEVERE, "Numero de argumentos invalidos ");
 			return;
 		}
 		String ip = args[0];

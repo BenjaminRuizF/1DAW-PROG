@@ -29,8 +29,8 @@ public class Lectura {
 			while (inputFile.hasNextLine()) {
 				inputFile.nextLine();
 				contador++;
-				App.LOGGER.log(Level.INFO, "Se han leido {0} alumnos", contador);
 			}
+			App.LOGGER.log(Level.INFO, "Se han leido {0} alumnos", contador);
 			while (fileScanner.hasNext()) {
 				for (int i = 0; i < contador; i++) {
 					String line = fileScanner.nextLine();

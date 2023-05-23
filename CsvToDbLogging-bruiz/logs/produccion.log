@@ -1,50 +1,65 @@
-[2023-05-23 13:21:37.328807600] PROD DETALLADO: Se ha introducido el Alumno: 15 de la Clase: 1SMR con Id: jlara
-[2023-05-23 13:21:37.331806400] PROD DETALLADO: Se ha introducido el Alumno: 16 de la Clase: 1SMR con Id: jmanzanares
-[2023-05-23 13:21:37.334804100] PROD DETALLADO: Se ha introducido el Alumno: 17 de la Clase: 1SMR con Id: lmartinez
-[2023-05-23 13:21:37.336804500] PROD DETALLADO: Se ha introducido el Alumno: 18 de la Clase: 1SMR con Id: smartinez
-[2023-05-23 13:21:37.339804400] PROD DETALLADO: Se ha introducido el Alumno: 19 de la Clase: 1SMR con Id: aperez
-[2023-05-23 13:21:37.342804200] PROD DETALLADO: Se ha introducido el Alumno: 20 de la Clase: 1SMR con Id: lperez
-[2023-05-23 13:21:37.344803200] PROD DETALLADO: Se ha introducido el Alumno: 21 de la Clase: 1SMR con Id: tpinardo
-[2023-05-23 13:21:37.346803800] PROD DETALLADO: Se ha introducido el Alumno: 22 de la Clase: 1SMR con Id: arodriguez
-[2023-05-23 13:21:37.349803500] PROD DETALLADO: Se ha introducido el Alumno: 23 de la Clase: 1SMR con Id: drodriguez
-[2023-05-23 13:21:37.351803700] PROD DETALLADO: Se ha introducido el Alumno: 24 de la Clase: 1SMR con Id: asanchez
-[2023-05-23 13:21:37.353805200] PROD DETALLADO: Se ha introducido el Alumno: 25 de la Clase: 1SMR con Id: asantiago
-[2023-05-23 13:21:37.356806100] PROD DETALLADO: Se ha introducido el Alumno: 26 de la Clase: 1SMR con Id: asiltamies
-[2023-05-23 13:21:37.359804000] PROD DETALLADO: Se ha introducido el Alumno: 27 de la Clase: 1SMR con Id: avera
-[2023-05-23 13:21:37.361805600] PROD DETALLADO: Se ha introducido el Alumno: 28 de la Clase: 1SMR con Id: azak
-[2023-05-23 13:21:37.364806900] PROD DETALLADO: Se ha introducido el Alumno: 1 de la Clase: 2SMR con Id: danton
-[2023-05-23 13:21:37.367803800] PROD DETALLADO: Se ha introducido el Alumno: 2 de la Clase: 2SMR con Id: sbarroso
-[2023-05-23 13:21:37.369804100] PROD DETALLADO: Se ha introducido el Alumno: 3 de la Clase: 2SMR con Id: odiaz
-[2023-05-23 13:21:37.373803200] PROD DETALLADO: Se ha introducido el Alumno: 4 de la Clase: 2SMR con Id: ddiaz
-[2023-05-23 13:21:37.375806200] PROD DETALLADO: Se ha introducido el Alumno: 5 de la Clase: 2SMR con Id: adomingo
-[2023-05-23 13:21:37.378804600] PROD DETALLADO: Se ha introducido el Alumno: 6 de la Clase: 2SMR con Id: jdominguez
-[2023-05-23 13:21:37.380802700] PROD DETALLADO: Se ha introducido el Alumno: 7 de la Clase: 2SMR con Id: dfresneda
-[2023-05-23 13:21:37.383802900] PROD DETALLADO: Se ha introducido el Alumno: 8 de la Clase: 2SMR con Id: sgarcia
-[2023-05-23 13:21:37.385803600] PROD DETALLADO: Se ha introducido el Alumno: 9 de la Clase: 2SMR con Id: pgarcia
-[2023-05-23 13:21:37.387803900] PROD DETALLADO: Se ha introducido el Alumno: 10 de la Clase: 2SMR con Id: agomez
-[2023-05-23 13:21:37.389803600] PROD DETALLADO: Se ha introducido el Alumno: 11 de la Clase: 2SMR con Id: gizquierdo
-[2023-05-23 13:21:37.391803300] PROD DETALLADO: Se ha introducido el Alumno: 12 de la Clase: 2SMR con Id: rleva
-[2023-05-23 13:21:37.393804200] PROD DETALLADO: Se ha introducido el Alumno: 13 de la Clase: 2SMR con Id: gmoreno
-[2023-05-23 13:21:37.395803100] PROD DETALLADO: Se ha introducido el Alumno: 14 de la Clase: 2SMR con Id: apalomino
-[2023-05-23 13:21:37.398806200] PROD DETALLADO: Se ha introducido el Alumno: 15 de la Clase: 2SMR con Id: vpohynayko
-[2023-05-23 13:21:37.400805600] PROD DETALLADO: Se ha introducido el Alumno: 16 de la Clase: 2SMR con Id: lrodriguez
-[2023-05-23 13:21:37.403805000] PROD DETALLADO: Se ha introducido el Alumno: 17 de la Clase: 2SMR con Id: jruiz
-[2023-05-23 13:21:37.405806100] PROD DETALLADO: Se ha introducido el Alumno: 18 de la Clase: 2SMR con Id: eschmidt
-[2023-05-23 13:21:37.406804900] PROD INFORMACIÓN: Se han insertado 1.000
-[2023-05-23 13:23:13.291328200] PROD INFORMACIÓN: Iniciando conexion hacia xe
-[2023-05-23 13:23:14.162326400] PROD INFORMACIÓN: Se han leido 115 alumnos
-[2023-05-23 13:23:14.348325900] PROD INFORMACIÓN: Se han insertado 1.000
-[2023-05-23 13:28:15.645664700] PROD INFORMACIÓN: Iniciando conexion hacia xe
-[2023-05-23 13:28:16.519659500] PROD INFORMACIÓN: Se han leido 115 alumnos
-[2023-05-23 13:28:16.722658800] PROD INFORMACIÓN: Se han insertado 115
-[2023-05-23 13:29:14.467058100] PROD INFORMACIÓN: Iniciando conexion hacia jdbc:oracle:thin:@//"127.0.0.1 "/" xe
-[2023-05-23 13:29:15.308054600] PROD INFORMACIÓN: Se han leido 115 alumnos
-[2023-05-23 13:29:15.498055600] PROD INFORMACIÓN: Se han insertado 115 alumnos
-[2023-05-23 13:31:07.398699200] PROD INFORMACIÓN: Iniciando conexion hacia jdbc:oracle:thin:@//127.0.0.1/xe
-[2023-05-23 13:31:08.336695800] PROD INFORMACIÓN: Se han leido 115 alumnos
-[2023-05-23 13:31:08.515696800] PROD INFORMACIÓN: Se han insertado 115 alumnos
-[2023-05-23 13:33:06.508794600] PROD INFORMACIÓN: Iniciando conexion hacia jdbc:oracle:thin:@//127.0.0.1/xe
-[2023-05-23 13:33:07.261794700] PROD INFORMACIÓN: Conexion: OK
-[2023-05-23 13:33:07.352793400] PROD INFORMACIÓN: Se han leido 115 alumnos
-[2023-05-23 13:33:07.538793800] PROD INFORMACIÓN: Se han insertado 115 alumnos
-[2023-05-23 13:33:07.540794600] PROD INFORMACIÓN: Insercion: OK
+[2023-05-23 13:42:29.000015100] PROD DETALLADO: Se ha introducido el Alumno: 8 de la Clase: 1DAW con Id: dgonzalez
+[2023-05-23 13:42:29.003012600] PROD DETALLADO: Se ha introducido el Alumno: 9 de la Clase: 1DAW con Id: sgutierrez
+[2023-05-23 13:42:29.005012500] PROD DETALLADO: Se ha introducido el Alumno: 10 de la Clase: 1DAW con Id: diglesias
+[2023-05-23 13:42:29.008013000] PROD DETALLADO: Se ha introducido el Alumno: 11 de la Clase: 1DAW con Id: ajimenez
+[2023-05-23 13:42:29.012010800] PROD DETALLADO: Se ha introducido el Alumno: 12 de la Clase: 1DAW con Id: fnieto
+[2023-05-23 13:42:29.015011800] PROD DETALLADO: Se ha introducido el Alumno: 13 de la Clase: 1DAW con Id: epastrana
+[2023-05-23 13:42:29.017012700] PROD DETALLADO: Se ha introducido el Alumno: 14 de la Clase: 1DAW con Id: tpietsch
+[2023-05-23 13:42:29.019012800] PROD DETALLADO: Se ha introducido el Alumno: 15 de la Clase: 1DAW con Id: dponce
+[2023-05-23 13:42:29.022012400] PROD DETALLADO: Se ha introducido el Alumno: 16 de la Clase: 1DAW con Id: gvera
+[2023-05-23 13:42:29.024010900] PROD DETALLADO: Se ha introducido el Alumno: 1 de la Clase: 1SMR con Id: salvarez
+[2023-05-23 13:42:29.027014300] PROD DETALLADO: Se ha introducido el Alumno: 2 de la Clase: 1SMR con Id: savila
+[2023-05-23 13:42:29.030012100] PROD DETALLADO: Se ha introducido el Alumno: 3 de la Clase: 1SMR con Id: saviles
+[2023-05-23 13:42:29.032013200] PROD DETALLADO: Se ha introducido el Alumno: 4 de la Clase: 1SMR con Id: ibellon
+[2023-05-23 13:42:29.035012200] PROD DETALLADO: Se ha introducido el Alumno: 5 de la Clase: 1SMR con Id: mbraojos
+[2023-05-23 13:42:29.038012300] PROD DETALLADO: Se ha introducido el Alumno: 6 de la Clase: 1SMR con Id: jbuabent
+[2023-05-23 13:42:29.041024300] PROD DETALLADO: Se ha introducido el Alumno: 7 de la Clase: 1SMR con Id: pbueno
+[2023-05-23 13:42:29.044012900] PROD DETALLADO: Se ha introducido el Alumno: 8 de la Clase: 1SMR con Id: ecaceres
+[2023-05-23 13:42:29.047011900] PROD DETALLADO: Se ha introducido el Alumno: 9 de la Clase: 1SMR con Id: rcalvo
+[2023-05-23 13:42:29.051011900] PROD DETALLADO: Se ha introducido el Alumno: 10 de la Clase: 1SMR con Id: icerbilla
+[2023-05-23 13:42:29.054013400] PROD DETALLADO: Se ha introducido el Alumno: 11 de la Clase: 1SMR con Id: icrespo
+[2023-05-23 13:42:29.058015300] PROD DETALLADO: Se ha introducido el Alumno: 12 de la Clase: 1SMR con Id: ddiazs
+[2023-05-23 13:42:29.060012000] PROD DETALLADO: Se ha introducido el Alumno: 13 de la Clase: 1SMR con Id: sgarciac
+[2023-05-23 13:42:29.063011700] PROD DETALLADO: Se ha introducido el Alumno: 14 de la Clase: 1SMR con Id: fgomez
+[2023-05-23 13:42:29.066012000] PROD DETALLADO: Se ha introducido el Alumno: 15 de la Clase: 1SMR con Id: jlara
+[2023-05-23 13:42:29.069014100] PROD DETALLADO: Se ha introducido el Alumno: 16 de la Clase: 1SMR con Id: jmanzanares
+[2023-05-23 13:42:29.072011800] PROD DETALLADO: Se ha introducido el Alumno: 17 de la Clase: 1SMR con Id: lmartinez
+[2023-05-23 13:42:29.075013800] PROD DETALLADO: Se ha introducido el Alumno: 18 de la Clase: 1SMR con Id: smartinez
+[2023-05-23 13:42:29.080012900] PROD DETALLADO: Se ha introducido el Alumno: 19 de la Clase: 1SMR con Id: aperez
+[2023-05-23 13:42:29.083013400] PROD DETALLADO: Se ha introducido el Alumno: 20 de la Clase: 1SMR con Id: lperez
+[2023-05-23 13:42:29.086011300] PROD DETALLADO: Se ha introducido el Alumno: 21 de la Clase: 1SMR con Id: tpinardo
+[2023-05-23 13:42:29.090011900] PROD DETALLADO: Se ha introducido el Alumno: 22 de la Clase: 1SMR con Id: arodriguez
+[2023-05-23 13:42:29.097010700] PROD DETALLADO: Se ha introducido el Alumno: 23 de la Clase: 1SMR con Id: drodriguez
+[2023-05-23 13:42:29.100010600] PROD DETALLADO: Se ha introducido el Alumno: 24 de la Clase: 1SMR con Id: asanchez
+[2023-05-23 13:42:29.103009200] PROD DETALLADO: Se ha introducido el Alumno: 25 de la Clase: 1SMR con Id: asantiago
+[2023-05-23 13:42:29.106009100] PROD DETALLADO: Se ha introducido el Alumno: 26 de la Clase: 1SMR con Id: asiltamies
+[2023-05-23 13:42:29.111009400] PROD DETALLADO: Se ha introducido el Alumno: 27 de la Clase: 1SMR con Id: avera
+[2023-05-23 13:42:29.114010700] PROD DETALLADO: Se ha introducido el Alumno: 28 de la Clase: 1SMR con Id: azak
+[2023-05-23 13:42:29.118008800] PROD DETALLADO: Se ha introducido el Alumno: 1 de la Clase: 2SMR con Id: danton
+[2023-05-23 13:42:29.120010000] PROD DETALLADO: Se ha introducido el Alumno: 2 de la Clase: 2SMR con Id: sbarroso
+[2023-05-23 13:42:29.122010400] PROD DETALLADO: Se ha introducido el Alumno: 3 de la Clase: 2SMR con Id: odiaz
+[2023-05-23 13:42:29.125012700] PROD DETALLADO: Se ha introducido el Alumno: 4 de la Clase: 2SMR con Id: ddiaz
+[2023-05-23 13:42:29.129013600] PROD DETALLADO: Se ha introducido el Alumno: 5 de la Clase: 2SMR con Id: adomingo
+[2023-05-23 13:42:29.132009300] PROD DETALLADO: Se ha introducido el Alumno: 6 de la Clase: 2SMR con Id: jdominguez
+[2023-05-23 13:42:29.135009400] PROD DETALLADO: Se ha introducido el Alumno: 7 de la Clase: 2SMR con Id: dfresneda
+[2023-05-23 13:42:29.137009000] PROD DETALLADO: Se ha introducido el Alumno: 8 de la Clase: 2SMR con Id: sgarcia
+[2023-05-23 13:42:29.139008400] PROD DETALLADO: Se ha introducido el Alumno: 9 de la Clase: 2SMR con Id: pgarcia
+[2023-05-23 13:42:29.142008900] PROD DETALLADO: Se ha introducido el Alumno: 10 de la Clase: 2SMR con Id: agomez
+[2023-05-23 13:42:29.144010300] PROD DETALLADO: Se ha introducido el Alumno: 11 de la Clase: 2SMR con Id: gizquierdo
+[2023-05-23 13:42:29.148007600] PROD DETALLADO: Se ha introducido el Alumno: 12 de la Clase: 2SMR con Id: rleva
+[2023-05-23 13:42:29.150008200] PROD DETALLADO: Se ha introducido el Alumno: 13 de la Clase: 2SMR con Id: gmoreno
+[2023-05-23 13:42:29.152008000] PROD DETALLADO: Se ha introducido el Alumno: 14 de la Clase: 2SMR con Id: apalomino
+[2023-05-23 13:42:29.154007500] PROD DETALLADO: Se ha introducido el Alumno: 15 de la Clase: 2SMR con Id: vpohynayko
+[2023-05-23 13:42:29.156008300] PROD DETALLADO: Se ha introducido el Alumno: 16 de la Clase: 2SMR con Id: lrodriguez
+[2023-05-23 13:42:29.159008300] PROD DETALLADO: Se ha introducido el Alumno: 17 de la Clase: 2SMR con Id: jruiz
+[2023-05-23 13:42:29.161010900] PROD DETALLADO: Se ha introducido el Alumno: 18 de la Clase: 2SMR con Id: eschmidt
+[2023-05-23 13:42:29.161010900] PROD INFORMACIÓN: Se han insertado 115 alumnos
+[2023-05-23 13:42:29.162008000] PROD INFORMACIÓN: Insercion: OK
+[2023-05-23 13:42:39.560990300] PROD GRAVE: Numero de argumentos invalidos "127.0.0.1" 
+[2023-05-23 13:43:16.004199900] PROD GRAVE: Numero de argumentos invalidos 
+[2023-05-23 13:43:27.054140800] PROD INFORMACIÓN: Iniciando conexion hacia jdbc:oracle:thin:@//127.0.0.1/xe
+[2023-05-23 13:43:27.783114600] PROD INFORMACIÓN: Conexion: OK
+[2023-05-23 13:43:27.867111300] PROD INFORMACIÓN: Se han leido 115 alumnos
+[2023-05-23 13:43:27.874112300] PROD INFORMACIÓN: Se han creado 115 objetos alumno
+[2023-05-23 13:43:27.882111000] PROD GRAVE: Las BBDD no son lo tuyo ORA-00001: restricción única (SYSTEM.MOD_NUM) violada
+
