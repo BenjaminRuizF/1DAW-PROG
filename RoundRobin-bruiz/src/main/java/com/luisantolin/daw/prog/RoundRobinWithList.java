@@ -46,6 +46,7 @@ public class RoundRobinWithList implements RoundRobin {
 		if (Iterador == RoundRobin.size()) {
 			Iterador = 0;
 			retorno = RoundRobin.get(Iterador);
+			Iterador++;
 			return retorno;
 		} else {
 			retorno = RoundRobin.get(Iterador);
@@ -68,6 +69,11 @@ public class RoundRobinWithList implements RoundRobin {
 			return RoundRobin.get(index % RoundRobin.size());
 		} else {
 			return RoundRobin.get(index);
+		}
+	}
+	public void sacar() {
+		for (int i = 0; i < RoundRobin.size(); i++) {
+			System.out.println(RoundRobin.get(i));
 		}
 	}
 

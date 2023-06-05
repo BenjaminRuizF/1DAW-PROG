@@ -7,7 +7,7 @@ public class RoundRobinWithArray implements RoundRobin {
 	private int Iterador = 0;
 
 	public RoundRobinWithArray() {
-		RoundRobin = new String[100];
+		RoundRobin = new String[0];
 	}
 
 	@Override
@@ -34,7 +34,7 @@ public class RoundRobinWithArray implements RoundRobin {
 		// TODO Auto-generated method stub
 		String retorno = RoundRobin[0];
 		String[] aux = new String[RoundRobin.length - 1];
-		for (int i = 0; i < RoundRobin.length; i++) {
+		for (int i = 1; i < RoundRobin.length; i++) {
 			aux[i - 1] = RoundRobin[i];
 		}
 		RoundRobin = aux;
@@ -75,6 +75,11 @@ public class RoundRobinWithArray implements RoundRobin {
 			return RoundRobin[index % RoundRobin.length];
 		} else {
 			return RoundRobin[index];
+		}
+	}
+	public void sacar() {
+		for (int i = 0; i < RoundRobin.length; i++) {
+			System.out.println(RoundRobin[i]);
 		}
 	}
 }
